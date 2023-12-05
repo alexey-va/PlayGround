@@ -6,14 +6,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Employee {
 
-    public Employee(String name, Department department) {
+    public Employee(String name) {
         this.name = name;
-        this.department = department;
     }
 
     String name;
     Department department;
-
 
     @Override
     public String toString() {

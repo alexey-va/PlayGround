@@ -76,13 +76,8 @@ public class Main {
 
         Stream.of(p1, p2, p3).forEach(System.out::println);
 
-        System.out.println("\n2.4");
-        Department department = new Department("IT");
-        Employee e1 = new Employee("Петров", department);
-        Employee e2 = new Employee("Козлов", department);
-        Employee e3 = new Employee("Сидоров", department);
-        department.setHead(e2);
-        Stream.of(e1,e2,e3,department).forEach(System.out::println);
+        //System.out.println("\n2.4");
+
 
 
         System.out.println("\n3.1");
@@ -138,6 +133,14 @@ public class Main {
         Stream.of(ca,cb,cc,cd,ce,cf).forEach(System.out::println);
 
         System.out.println("\n3.4");
+        Department department = new Department("IT");
+        Employee e1 = new Employee("Петров");
+        Employee e2 = new Employee("Козлов");
+        Employee e3 = new Employee("Сидоров");
+        department.setHead(e2);
+        department.addEmployee(e1, e3);
+        Stream.of(e1,e2,e3,department).forEach(System.out::println);
 
+        System.out.println("\n4.1");
     }
 }
