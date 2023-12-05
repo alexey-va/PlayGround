@@ -6,7 +6,7 @@ public class Department {
 
 
     String name;
-    Employee head = Employee.stub;
+    Employee head;
 
     public Department(String name) {
         this.name = name;
@@ -18,5 +18,13 @@ public class Department {
 
     public void setHead(Employee head) {
         this.head = head;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "name='" + name + '\'' +
+                ", head=" + head.getName() +
+                '}';
     }
 }

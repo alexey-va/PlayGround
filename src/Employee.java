@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Employee {
 
-    public static Employee stub = new Employee("STUB", null);
-
     public Employee(String name, Department department) {
         this.name = name;
         this.department = department;
