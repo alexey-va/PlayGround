@@ -1,12 +1,10 @@
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class Person {
 
-    String name;
+    Name name;
     int height;
-
-    public Person(String name, int height) {
-        this.name = name;
-        this.height = height;
-    }
 
     @Override
     public String toString() {

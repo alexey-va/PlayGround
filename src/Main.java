@@ -4,12 +4,12 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
 
-        Person p1 = new Person("Клеопатра", 152);
-        Person p2 = new Person("Пушкин", 167);
-        Person p3 = new Person("Владимир", 189);
+        //Person p1 = new Person("Клеопатра", 152);
+        //Person p2 = new Person("Пушкин", 167);
+        //Person p3 = new Person("Владимир", 189);
 
-        System.out.println("1.2");
-        Stream.of(p1,p2,p3).forEach(System.out::println);
+        //System.out.println("1.2");
+        //Stream.of(p1,p2,p3).forEach(System.out::println);
 
         Name n1 = new Name.NameBuilder()
                 .n1("Клеопатра")
@@ -51,6 +51,8 @@ public class Main {
         Stream.of(l1, l2, l3).forEach(System.out::println);
 
         System.out.println("\n2.2");
+        Stream.of(new Person(n1, 152), new Person(n2, 167), new Person(n3, 189))
+                .forEach(System.out::println);
 
     }
 }
