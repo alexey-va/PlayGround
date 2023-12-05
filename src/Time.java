@@ -15,6 +15,11 @@ public class Time {
     public Time(int sec){
         time = LocalTime.ofSecondOfDay(sec % (LocalTime.MAX.toSecondOfDay()+1));
     }
+    public Time(int h, int m, int s){
+        if(h > LocalTime.MAX.getHour() || m > LocalTime.MAX.getMinute() || s > LocalTime.MAX.getSecond())
+            throw new IllegalArgumentException("Incorrent time values! "+h+" | "+m+" | "+s);
+        time = LocalTime.of(h,m,s);
+    }
 
     @Override
     public String toString(){

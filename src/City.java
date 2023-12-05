@@ -9,10 +9,14 @@ public class City {
 
     String name;
     Set<Route> routeList = new HashSet<>();
-    private record Route(City target, int price){}
+    public record Route(City target, int price){}
 
     public City(String name){
         this.name=name;
+    }
+    public City(String name, Route... routes){
+        this(name);
+        this.routeList= Arrays.stream(routes).collect(Collectors.toSet());
     }
 
     public void addRoute(City target, int price, boolean bidirectional){
@@ -28,7 +32,6 @@ public class City {
                         .map(route -> " > To "+ route.target.name+" for "+route.price+"$")
                         .collect(Collectors.joining("\n"));
     }
-
 
 
 

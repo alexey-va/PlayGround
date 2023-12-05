@@ -11,6 +11,15 @@ public class Name {
         this.n3 = n3;
     }
 
+    public Name(String n1, String n2) {
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+    public Name(String n2) {
+        this.n2 = n2;
+    }
+
+
     @Override
     public String toString() {
         return ((n1 != null ? n1 + " " : "") +

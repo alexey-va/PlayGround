@@ -1,9 +1,11 @@
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
 @AllArgsConstructor
 public class Building {
 
-    int floors;
+    final int floors;
 
 
     @Override

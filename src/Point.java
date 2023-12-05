@@ -1,7 +1,10 @@
+import lombok.AllArgsConstructor;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.spi.DecimalFormatSymbolsProvider;
 
+@AllArgsConstructor
 public class Point {
 
     private static final DecimalFormat format = new DecimalFormat("##.#"){{
@@ -11,11 +14,6 @@ public class Point {
     }};
     double x, y;
 
-
-    public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
 
     @Override
     public String toString() {

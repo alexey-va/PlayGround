@@ -55,7 +55,7 @@ public class Main {
         //Stream.of(new Person(n1, 152), new Person(n2, 167), new Person(n3, 189))
         //        .forEach(System.out::println);
 
-        System.out.println("\n2.3");
+/*        System.out.println("\n2.3");
         Person p1 = new Person(
                 Name.builder().n1("Чудов").n2("Иван").build(),
                 10);
@@ -66,15 +66,15 @@ public class Main {
         Person p3 = new Person(
                 Name.builder().n2("Борис").build(),
                 13123
-        );
+        );*/
 
-        p2.setFather(p1);
+/*        p2.setFather(p1);
         p2.parseFather();
 
         p3.setFather(p2);
         p3.parseFather();
 
-        Stream.of(p1, p2, p3).forEach(System.out::println);
+        Stream.of(p1, p2, p3).forEach(System.out::println);*/
 
         //System.out.println("\n2.4");
 
@@ -142,5 +142,53 @@ public class Main {
         Stream.of(e1,e2,e3,department).forEach(System.out::println);
 
         System.out.println("\n4.1");
+        Point pp1 = new Point(3,5);
+        Point pp2 = new Point(25,6);
+        Point pp3 = new Point(7,8);
+        Stream.of(pp1, pp2, pp3).forEach(System.out::println);
+
+        System.out.println("\n4.2");
+        Line ll1 = new Line(1,3,23,8);
+        Line ll2 = new Line(5,10,25,10);
+        Line ll3 = new Line(ll1.getStart(), ll2.getEnd());
+        ll1.getStart().x = 123;
+        Stream.of(ll1, ll2, ll3).forEach(System.out::println);
+
+        System.out.println("\n4.3");
+        Building bb1 = new Building(2);
+        Building bb2 = new Building(35);
+        Building bb3 = new Building(91);
+        Stream.of(bb1, bb2, bb3).forEach(System.out::println);
+        // bb1.floors = 1; - not compiling
+
+        System.out.println("\n4.4");
+        System.out.println(new Time(10000)+"\n"+new Time(2,3,5));
+
+        System.out.println("\n4.5");
+        Name nn1 = new Name("Клеопатра");
+        Name nn2 = new Name("Александр", "Сергеевич", "Пушкин");
+        Name nn3 = new Name("Бонифатьевич", "Христофор");
+        Stream.of(nn1, nn2, nn3).forEach(System.out::println);
+
+        System.out.println("\n4.6");
+        Person p1 = new Person("Лев", 170);
+        Person p2 = new Person(new Name("Пушкин", "Сергей"), 168, p1);
+        Person p3 = new Person("Александр", 167, p2);
+        Stream.of(p1,p2,p3).forEach(System.out::println);
+
+        System.out.println("\n4.7");
+        Stream.of(new Student("Vasya", 3,4,5), new Student("Maxim"))
+                .forEach(System.out::println);
+
+        System.out.println("\n4.8");
+        City cc1 = new City("a");
+        City cc2 = new City("b", new City.Route(cc1, 10));
+        Stream.of(cc1, cc2).forEach(System.out::println);
+
+        System.out.println("\n4.9");
+        BrokenLine br1 = new BrokenLine();
+        BrokenLine br2 = new BrokenLine(new Point(1,2), new Point(33,66));
+        Stream.of(br1,br2).forEach(System.out::println);
+
     }
 }
