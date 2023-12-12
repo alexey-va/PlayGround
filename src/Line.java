@@ -14,6 +14,10 @@ public class Line {
         end = new Point(x2,y2);
     }
 
+    public double length(){
+        return start.distanceTo(end);
+    }
+
     @Override
     public String toString(){
         return "Line from "+start+" to "+end;

@@ -21,6 +21,18 @@ public class Time {
         time = LocalTime.of(h,m,s);
     }
 
+    public int hours(){
+        return time.getHour();
+    }
+
+    public int minutes(){
+        return time.getMinute();
+    }
+
+    public int seconds(){
+        return time.getSecond();
+    }
+
     @Override
     public String toString(){
         return time.format(
